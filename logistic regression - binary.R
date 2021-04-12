@@ -14,8 +14,12 @@ train <- mydata[ind==1,]
 test <- mydata[ind==2,]
 
 # Logistic regression model
+mymodel=glm(admit ~ gre + gpa + rank, data = train, family = "binomial")
+summary(mymodel)
+#### NOTE that we dropped the gre variable since it was statistically insignificant
 mymodel <- glm(admit ~ gpa + rank, data = train, family = 'binomial')
 summary(mymodel)
+
 
 # Prediction
 p1 <- predict(mymodel, train, type = 'response')
