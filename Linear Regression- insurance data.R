@@ -15,7 +15,7 @@ pairs.panels(insurance[c("age", "bmi", "children", "expenses")])
 
 ##  Training a model on the data
 ins_model <- lm(expenses ~ ., data = insurance)
-ins_model
+ins_model 
 
 ## Evaluating model performance
 summary(ins_model)
