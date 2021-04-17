@@ -37,7 +37,7 @@ library(gmodels)
 ##Evaluating the result
 CrossTable(x = wbcd_test_labels, y = wbcd_test_pred,
            prop.chisq=FALSE)
-##In order to improve the performance of our model , we'll use Z-score standarisation
+##In an attempt to improve the performance of our model , we'll use Z-score standarisation
 wbcd_z <- as.data.frame(scale(wbcd[-1]))
 #check the result
 summary(wbcd_z$area_mean)
